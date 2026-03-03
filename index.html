@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,15 +26,20 @@
     </nav>
 </header>
 
+<!-- HERO SECTION -->
+
 <section class="hero">
 
-    <img src="images/lotus.png" class="lotus-bg">
+    <!-- Lotus Background -->
+    <img src="images/lotus1.png" class="lotus-bg">
 
+    <!-- Leader Images -->
     <div class="leaders-images">
-        <img src="images/modi.png" class="leader-img left">
+        <img src="images/namo.png" class="leader-img left">
         <img src="images/rajeev.png" class="leader-img right">
     </div>
 
+    <!-- Center Text -->
     <div class="hero-content">
         <h1>Nation First | രാഷ്ട്രം പ്രഥമം</h1>
         <p>Development • Service • Commitment</p>
@@ -44,53 +48,36 @@
 
 </section>
 
+<!-- ABOUT PREVIEW -->
+
 <section class="about-preview">
     <h2>About Us | ഞങ്ങളേക്കുറിച്ച്</h2>
     <p>
-        BJP Kothamangalam Mandalam works under the leadership of the state unit
+        BJP Kothamangalam Mandalam works under the guidance of the state leadership
         to strengthen development, transparency and social harmony.
         കോതമംഗലം മണ്ഡലം വികസനത്തിനും സാമൂഹിക ഐക്യത്തിനുമായി പ്രവർത്തിക്കുന്നു.
     </p>
 </section>
+
+<!-- NEWS SECTION -->
 
 <section class="news">
     <h2>Latest Updates | പുതിയ വാർത്തകൾ</h2>
 
     <div class="news-grid">
         <div class="card">
-            <h3>Development Program</h3>
-            <p>Mandalam level infrastructure and welfare initiatives.</p>
+            <h3>Development Initiative</h3>
+            <p>Mandalam level infrastructure and welfare initiatives conducted successfully.</p>
         </div>
 
         <div class="card">
             <h3>Community Service</h3>
-            <p>Relief support and public service activities conducted.</p>
+            <p>Relief and public welfare programs for the community.</p>
         </div>
 
         <div class="card">
-            <h3>Youth Leadership</h3>
-            <p>Engaging young leaders for progressive Kerala.</p>
-        </div>
-    </div>
-</section>
-
-<section class="leaders">
-    <h2>Leadership | നേതൃത്വം</h2>
-
-    <div class="leader-grid">
-        <div class="leader-card">
-            <div class="avatar"></div>
-            <h4>President</h4>
-        </div>
-
-        <div class="leader-card">
-            <div class="avatar"></div>
-            <h4>General Secretary</h4>
-        </div>
-
-        <div class="leader-card">
-            <div class="avatar"></div>
-            <h4>Mandalam Committee</h4>
+            <h3>Youth Engagement</h3>
+            <p>Empowering youth leadership for progressive Kerala.</p>
         </div>
     </div>
 </section>
@@ -101,7 +88,18 @@
 
 <a href="https://wa.me/919XXXXXXXXX" class="whatsapp">WhatsApp</a>
 
-<script src="script.js"></script>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    if(nav.style.display === "flex"){
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+    }
+});
+</script>
 
 </body>
 </html>
