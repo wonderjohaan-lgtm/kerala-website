@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
 }
 
 /* HEADER */
@@ -10,10 +11,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: rgba(0,0,0,0.7);
+    background: linear-gradient(90deg,#ff6a00,#ff9900);
     color: white;
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
@@ -35,51 +36,83 @@ nav a {
     cursor: pointer;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
     height: 100vh;
-    background:
-        linear-gradient(rgba(255,127,0,0.85), rgba(0,0,0,0.75)),
-        url('https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg,#ff6a00,#ff9900);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-content h1 {
+/* Subtle lotus watermark effect */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: url('images/lotus1.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.05;
+    bottom: -100px;
+    right: -100px;
+}
+
+.hero-inner h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.hero-content h2 {
+.hero-inner h2 {
     font-size: 2rem;
     margin-bottom: 15px;
 }
 
 .btn {
     background: white;
-    color: #ff7f00;
+    color: #ff6a00;
     padding: 12px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
     font-weight: bold;
 }
 
-/* ABOUT */
+/* VISION */
 
 section {
     padding: 80px 40px;
     text-align: center;
 }
 
-.about-preview {
-    background: #f5f5f5;
+.vision {
+    background: #f7f7f7;
+}
+
+/* PROGRAMS */
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 280px;
+    padding: 25px;
+    background: white;
+    border-top: 5px solid #ff6a00;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
 }
 
 /* FOOTER */
@@ -98,7 +131,7 @@ footer {
     nav {
         display: none;
         flex-direction: column;
-        background: #ff7f00;
+        background: #ff6a00;
         position: absolute;
         right: 0;
         top: 60px;
@@ -114,11 +147,11 @@ footer {
         display: block;
     }
 
-    .hero-content h1 {
+    .hero-inner h1 {
         font-size: 2rem;
     }
 
-    .hero-content h2 {
-        font-size: 1.4rem;
+    .hero-inner h2 {
+        font-size: 1.3rem;
     }
 }
