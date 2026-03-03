@@ -1,49 +1,147 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: white;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* HEADER */
+
 header {
-    background: linear-gradient(to right, #ff9933, #138808);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(90deg,#ff7f00,#138808);
     color: white;
-    padding: 15px;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 nav a {
-    margin: 10px;
+    margin-left: 20px;
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
 .hero {
-    background: linear-gradient(#ff9933, #ffffff, #138808);
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.content {
-    padding: 40px;
-    text-align: center;
-}
-
-.gallery {
+    height: 90vh;
+    background: linear-gradient(rgba(255,127,0,0.8),rgba(19,136,8,0.8)),
+                url('https://images.unsplash.com/photo-1509099836639-18ba1795216d');
+    background-size: cover;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 40px;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-.gallery img {
-    width: 300px;
-    border-radius: 10px;
+.hero h1 {
+    font-size: 3rem;
 }
+
+.btn {
+    background: white;
+    color: #ff7f00;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.news-grid,
+.leader-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card,
+.leader-card {
+    width: 280px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover,
+.leader-card:hover {
+    transform: translateY(-5px);
+}
+
+.avatar {
+    height: 120px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
 
 footer {
-    background: #222;
+    background: #111;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #ff7f00;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 200px;
+    }
+
+    nav a {
+        padding: 15px;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
 }
